@@ -31,21 +31,25 @@ const VerifyOtp = () => {
 
   return (
     <div className="login-background"> 
-     <Card
-      style={{
-      width: "100%",
-      maxWidth: "400px",  // Restrict width on larger screens
-      background: "linear-gradient(135deg, rgba(255, 255, 255, 0.3), rgba(0, 0, 0, 0.3))",  // Linear gradient
-      border: "none",  // No border
-      padding: "20px",  // Padding for spacing inside the card
-     }}
-     >
+    <Card
+         style={{
+         width: "472px",
+         height: "560px",
+         Top: "688px",
+         Left: "957px",
+         Rotation : "180°",
+         background: "linear-gradient(0deg, rgba(27, 38, 54, 0.9) 40.71%, rgba(179, 121, 48, 0.9) )", // Applied the gradient
+         border: "1px solid #F4BC2E",
+         Radius: "16px" // No border
+        //  padding: "20px",  // Padding for spacing inside the card
+  }}
+>
         <CardBody>
           <CardTitle tag="h3" className="text-center">
-            <img
-              src={bullLogo}
+          <img
+              src={bullLogo} // Use the imported image here
               alt="Angry Bull Icon"
-              style={{ width: "100px", marginRight: "10px" }}
+              style={{ width: "173px",height: "173.5px", Top: "171px", Left:"635px" }}
             />
             <br />
           </CardTitle>
@@ -54,7 +58,9 @@ const VerifyOtp = () => {
             OTP
           </strong>
           <p className="text-center" style={{ color: "black" }}>
-            Please Enter a OTP send to: <strong style={{ color: "white" }}>{email}</strong>
+            Please Enter a OTP send to: 
+            <br/>
+            <strong style={{ color: "white" }}>{email}</strong>
           </p>
 
           {message && <Alert color="danger">{message}</Alert>}
