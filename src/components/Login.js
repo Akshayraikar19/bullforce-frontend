@@ -44,12 +44,6 @@ export default function Login() {
         setTimeout(() => {
           navigate("/verifyOtp");
         }, 3000);
-
-        await axios.post("/users/login", formData);
-        setEmail(email)
-        // Set success message from backend response
-        setSuccessMessage(response.data.message);
-        navigate("/verifyOtp");  // Set the email in AuthContext and navigate
       } catch (err) {
         setServerErrors(err.response?.data?.errors || "Login failed. Please try again.");
       }
