@@ -1,40 +1,3 @@
-// import { Routes, Route, Link } from 'react-router-dom';
-// import { Navbar, NavbarBrand, Nav, NavItem, NavLink } from 'reactstrap';
-// import Login from './components/Login';
-// import VerifyOtp from './components/VerifyOtp';
-// import bullLogo from "./images/Group 42228.png"
-
-// function App() {
-//   return (
-//     <div>
-//       {/* Navbar */}
-//       <Navbar color="dark" dark expand="md">
-//       <NavbarBrand href="/">
-//       <img
-//            src={bullLogo}
-//               alt="Bull Force Logo"
-//            style={{ width: '50px', height: '50px', margin: '20px', marginLeft: '30px' }} // Adjust margin-left to move logo right
-//        />
-//       </NavbarBrand>
-//         <Nav className="ml-auto" navbar>
-//           <NavItem>
-//             <NavLink tag={Link} to="/"></NavLink>
-//           </NavItem>
-//         </Nav>
-//       </Navbar>
-
-//       {/* Routes */}
-//       <Routes>
-//         <Route path="/" element={<Login />} />
-//         <Route path="/verifyOtp" element={<VerifyOtp />} />
-//       </Routes>
-//     </div>
-//   );
-// }
-
-// export default App;
-
-
 import { Routes, Route, Link } from 'react-router-dom';
 import { Navbar, NavbarBrand, Nav, NavItem, NavLink } from 'reactstrap';
 import Login from './components/Login';
@@ -45,12 +8,12 @@ function App() {
   return (
     <div>
       {/* Navbar */}
-      <Navbar color="dark" dark expand="md" style={{ padding: '5px 20px', height: "68px" }}> {/* Reduce padding */}
-        <NavbarBrand href="/" style={{ fontSize: '22px', fontWeight: 'bold' }}> {/* Increase font size and make text bold */}
+      <Navbar color="dark" dark expand="md" style={{ padding: '5px 20px', height: "68px" }}> 
+        <NavbarBrand href="/" style={{ fontSize: '22px', fontWeight: 'bold' }}> 
           <img
             src={bullLogo}
             alt="Bull Force Logo"
-            style={{ width: '146.82px', height: '45px', Top:"12px", Left: "62px" }} // Adjust logo size and margin
+            style={{ width: '146.82px', height: '45px', Top:"12px", Left: "62px" }} 
           />
         </NavbarBrand>
         <Nav className="ml-auto" navbar>
