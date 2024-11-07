@@ -14,6 +14,10 @@ export default function Login() {
   const [serverErrors, setServerErrors] = useState(null);
   const [clientErrors, setClientErrors] = useState({});
   const [successMessage, setSuccessMessage] = useState(null); // State to hold success message
+<<<<<<< HEAD
+=======
+
+>>>>>>> f68f5057d35ad2464341e92676b0bab5c17c69d4
 
   const runValidations = () => {
     const errors = {};
@@ -33,6 +37,7 @@ export default function Login() {
       setClientErrors({});
       try {
         const formData = { email };
+<<<<<<< HEAD
         const response = await axios.post("/users/login", formData);
         setEmail(email);
         
@@ -43,6 +48,13 @@ export default function Login() {
         setTimeout(() => {
           navigate("/verifyOtp");
         }, 3000);
+=======
+        await axios.post("/users/login", formData);
+        setEmail(email)
+        // Set success message from backend response
+        setSuccessMessage(response.data.message);
+        navigate("/verifyOtp");  // Set the email in AuthContext and navigate
+>>>>>>> f68f5057d35ad2464341e92676b0bab5c17c69d4
       } catch (err) {
         setServerErrors(err.response?.data?.errors || "Login failed. Please try again.");
       }
@@ -82,7 +94,10 @@ export default function Login() {
 
           {serverErrors && <Alert color="danger">{serverErrors}</Alert>}
           {successMessage && <Alert color="success">{successMessage}</Alert>} {/* Success message */}
+<<<<<<< HEAD
 
+=======
+>>>>>>> f68f5057d35ad2464341e92676b0bab5c17c69d4
           <Form onSubmit={handleLogin}>
             <FormGroup>
               <Input
