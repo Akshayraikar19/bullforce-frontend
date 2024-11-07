@@ -34,7 +34,6 @@ export default function Login() {
       setClientErrors({});
       try {
         const formData = { email };
-
         const response = await axios.post("/users/login", formData);
         setEmail(email);
         
@@ -51,7 +50,6 @@ export default function Login() {
         // Set success message from backend response
         setSuccessMessage(response.data.message);
         navigate("/verifyOtp");  // Set the email in AuthContext and navigate
-
       } catch (err) {
         setServerErrors(err.response?.data?.errors || "Login failed. Please try again.");
       }
@@ -63,12 +61,15 @@ export default function Login() {
   return (
     <div className="login-background">
        <Card
-  style={{
-    width: "100%",
-    maxWidth: "400px",  // Restrict width on larger screens
-    background: "linear-gradient(135deg, rgba(255, 255, 255, 0.3), rgba(0, 0, 0, 0.3))",  // Linear gradient
-    border: "none",  // No border
-    padding: "20px",  // Padding for spacing inside the card
+         style={{
+         width: "472px",
+         height: "560px",
+         Top: "128px",
+         Left: "485px",
+         background: "linear-gradient(0deg, rgba(27, 38, 54, 0.9) 40.71%, rgba(179, 121, 48, 0.9) )", // Applied the gradient
+         border: "1px solid #F4BC2E",
+         Radius: "16px" // No border
+        //  padding: "20px",  // Padding for spacing inside the card
   }}
 >
         <CardBody>
@@ -76,7 +77,7 @@ export default function Login() {
           <img
               src={bullLogo} // Use the imported image here
               alt="Angry Bull Icon"
-              style={{ width: "100px", marginRight: "10px" }}
+              style={{ width: "173px",height: "173.5px", Top: "171px", Left:"635px" }}
             />
             <br />
           </CardTitle>
@@ -115,3 +116,4 @@ export default function Login() {
     </div>
   );
 }
+
