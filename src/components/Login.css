@@ -1,14 +1,16 @@
 /* Styles for the background */
+/* Login.css */
 .login-background {
-    background-image: url("https://img.freepik.com/premium-photo/bitcoin-coin-golden-bull-stock-chart-bullish-market-btc-generated-ai_536572-999.jpg");
-    background-size: cover; /* Cover the entire background */
-    background-position: center; /* Center the background */
-    background-repeat: no-repeat; /* Avoid repeating the background image */
-    height: 100vh; /* Full viewport height */
-    width: 100%; /* Full width */
-    display: flex; /* Center content */
-    justify-content: center;
-    align-items: center;
-  }
+  background-image: url('../images//35369.jpg'); /* Adjust the path as per your folder structure */
+  background-size: cover; /* Cover the entire background */
+  background-position: center; /* Center the background */
+  background-repeat: no-repeat; /* Avoid repeating the background image */
+  height: 100vh; /* Full viewport height */
+  width: 100%; /* Full width */
+  display: flex; /* Center content */
+  justify-content: center;
+  align-items: center;
+}
+
   
  

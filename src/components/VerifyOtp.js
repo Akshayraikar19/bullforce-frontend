@@ -3,6 +3,7 @@ import { Card, CardBody, CardTitle, Form, FormGroup, Input, Button, Alert } from
 import { useAuth } from '../context/AuthContext'; 
 import axios from '../config/axios';
 import './Login.css'; 
+import bullLogo from "../images/Group .png"
 
 const VerifyOtp = () => {
   const { email } = useAuth();  // Access email from AuthContext
@@ -30,33 +31,30 @@ const VerifyOtp = () => {
 
   return (
     <div className="login-background"> 
-      <Card
-        style={{
-          width: "100%",
-          maxWidth: "400px",  // Restrict width on larger screens
-          backgroundColor: "rgba(255, 255, 255, 0.3)",  // Semi-transparent card
-          border: "none",  // No border
-          padding: "20px",  // Padding for spacing inside the card
-        }}
-      >
+     <Card
+      style={{
+      width: "100%",
+      maxWidth: "400px",  // Restrict width on larger screens
+      background: "linear-gradient(135deg, rgba(255, 255, 255, 0.3), rgba(0, 0, 0, 0.3))",  // Linear gradient
+      border: "none",  // No border
+      padding: "20px",  // Padding for spacing inside the card
+     }}
+     >
         <CardBody>
           <CardTitle tag="h3" className="text-center">
             <img
-              src="https://images.scalebranding.com/angry-bull-logo-ba646aad-ea04-4187-9a39-f53b670a293d.jpg"
+              src={bullLogo}
               alt="Angry Bull Icon"
               style={{ width: "100px", marginRight: "10px" }}
             />
             <br />
-            BullForce
-            <br />
-            Wealth Vaults
           </CardTitle>
         
           <strong className="text-center" style={{ color: "white", display: "block", textAlign: "center" }}>
             OTP
           </strong>
           <p className="text-center" style={{ color: "black" }}>
-            Enter the OTP sent to your email: <strong style={{ color: "white" }}>{email}</strong>
+            Please Enter a OTP send to: <strong style={{ color: "white" }}>{email}</strong>
           </p>
 
           {message && <Alert color="danger">{message}</Alert>}

@@ -17,6 +17,12 @@ root.render(
   <BrowserRouter>
   <AuthProvider>
     <App />
+    <ToastContainer
+            position="top-center"
+            autoClose={3000}
+            pauseOnHover={false}
+            theme="dark"
+          />
     </AuthProvider>
   </BrowserRouter>
 );
