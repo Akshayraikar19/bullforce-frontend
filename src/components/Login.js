@@ -69,13 +69,13 @@ export default function Login() {
          background: "linear-gradient(0deg, rgba(27, 38, 54, 0.9) 40.71%, rgba(179, 121, 48, 0.9) )", // Applied the gradient
          border: "1px solid #F4BC2E",
          Radius: "16px" // No border
-        //  padding: "20px",  // Padding for spacing inside the card
+        
   }}
 >
         <CardBody>
           <CardTitle tag="h3" className="text-center">
           <img
-              src={bullLogo} // Use the imported image here
+              src={bullLogo} 
               alt="Angry Bull Icon"
               style={{ width: "173px",height: "173.5px", Top: "171px", Left:"635px" }}
             />
