@@ -13,6 +13,8 @@ export default function Login() {
   const [email, setUserEmail] = useState("")
   const [serverErrors, setServerErrors] = useState(null);
   const [clientErrors, setClientErrors] = useState({});
+  const [successMessage, setSuccessMessage] = useState(null); // State to hold success message
+
 
   const runValidations = () => {
     const errors = {};
@@ -34,6 +36,8 @@ export default function Login() {
         const formData = { email };
         await axios.post("/users/login", formData);
         setEmail(email)
+        // Set success message from backend response
+        setSuccessMessage(response.data.message);
         navigate("/verifyOtp");  // Set the email in AuthContext and navigate
       } catch (err) {
         setServerErrors(err.response?.data?.errors || "Login failed. Please try again.");
@@ -75,6 +79,7 @@ export default function Login() {
             Login with Your Email ID
           </p>
           {serverErrors && <Alert color="danger">{serverErrors}</Alert>}
+          {successMessage && <Alert color="success">{successMessage}</Alert>} {/* Success message */}
           <Form onSubmit={handleLogin}>
             <FormGroup>
               <Input
