@@ -15,9 +15,7 @@ export const AuthProvider = ({ children }) => {
   useEffect(() => {
     if (email) {
       localStorage.setItem('email', email);
-    } else {
-      localStorage.removeItem('email'); // Clear email from localStorage if it's set to an empty string
-    }
+    } 
   }, [email]);
 
   return (

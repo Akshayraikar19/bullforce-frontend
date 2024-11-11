@@ -1,3 +1,4 @@
+
 // import { Routes, Route, Link } from 'react-router-dom';
 // import { Navbar, NavbarBrand, Nav, NavItem, NavLink } from 'reactstrap';
 // import Login from './components/Login';
@@ -35,6 +36,7 @@
 // export default App;
 
 
+
 import { Routes, Route, Link } from 'react-router-dom';
 import { Navbar, NavbarBrand, Nav, NavItem, NavLink } from 'reactstrap';
 import Login from './components/Login';
@@ -44,7 +46,11 @@ import bullLogo from "./images/Group 42228.png";
 function App() {
   return (
     <div>
+
      
+
+      {/* Navbar */}
+
       <Navbar color="dark" dark expand="md" style={{ padding: '5px 20px', height: "68px" }}>
         {/* Render NavbarBrand only on /verifyOtp route */}
         <Routes>
@@ -55,7 +61,11 @@ function App() {
                 <img
                   src={bullLogo}
                   alt="Bull Force Logo"
+
                   style={{ width: '146.82px', height: '45px', top: "12px", left: "62px",  marginLeft: '20px', }} // Adjust logo size and margin
+
+                  style={{ width: '146.82px', height: '45px', top: "12px", left: "62px" }} // Adjust logo size and margin
+
                 />
               </NavbarBrand>
             }
