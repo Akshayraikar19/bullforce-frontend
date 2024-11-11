@@ -10,7 +10,8 @@ export const AuthProvider = ({ children }) => {
   // Initialize the email state with value from localStorage if it exists
   const [email, setEmail] = useState(localStorage.getItem('email') || '');
 
-  // Use useEffect to update localStorage whenever the email changes
+
+  // // Use useEffect to update localStorage whenever the email changes
   useEffect(() => {
     if (email) {
       localStorage.setItem('email', email);

@@ -1,16 +1,12 @@
 /* Styles for the background */
-/* Login.css */
 .login-background {
-  background-image: url('../images//35369.jpg'); /* Adjust the path as per your folder structure */
-  background-size: cover; /* Cover the entire background */
-  background-position: center; /* Center the background */
-  background-repeat: no-repeat; /* Avoid repeating the background image */
-  height: 100vh; /* Full viewport height */
-  width: 100%; /* Full width */
-  display: flex; /* Center content */
+  background-image: url('../images/35369.jpg'); /* Make sure this path is correct relative to your Login.js */
+  background-size: cover;        /* Ensures the background image covers the entire screen */
+  background-position: center;   /* Centers the background image */
+  background-repeat: no-repeat;  /* Prevents the image from repeating */
+  height: 100vh;                 /* Full viewport height */
+  width: 100%;                   /* Full viewport width */
+  display: flex;                 /* Centers the card in the middle of the screen */
   justify-content: center;
   align-items: center;
 }
-
-  
- 
